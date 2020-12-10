@@ -1,16 +1,27 @@
-name: CI
-on:
-  push:
-    branches: [ main ]
-jobs:
+name: Run tests
+
+on: [push]
+
+jobs:  
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
 
     steps:
-    - uses: actions/checkout@v1
-    - uses: actions/setup-node@v1 #this will install Node and npm on Ubuntu
+    - name: Git checkout
+      uses: actions/checkout@v1
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
       with:
-        node-version: '12.x'
-    - run: npm install
-    - run: npm install -g @angular/cli > /dev/null
-    - run: ng build --prod
+        node-version: ${{ matrix.node-version }}
+
+    - npm install
+      env:
+        CI: true
+
+    - npm test
+      env:
+        CI: true
