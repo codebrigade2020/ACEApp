@@ -8,20 +8,7 @@ jobs:
         node-version: [12.x]
 
     steps:
-      - uses: actions/checkout@v1
-
-      - name: Cache node modules
-        uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-      - name: Node ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-      - name: npm install 
-        run: npm install
-        - name: npm build 
-        run: npm build
+      - name: Angular Github Actions
+  # You may pin to the exact commit or the version.
+  # uses: mayurrawte/github-angular-actions@babc38d81371a05fbe9b9b6d50d241efb96d4faf
+  uses: mayurrawte/github-angular-actions@latest
