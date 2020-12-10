@@ -1,0 +1,130 @@
+.ng-invalid.ng-touched {
+    border-color: red;
+}
+
+.home-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .sidenav{
+      width:300px;
+  }
+  
+  .action-button{
+      margin: 30px;
+  }
+  .mat-header-cell{
+      font-size:18px;
+  }
+
+  table {
+    width: 99%;
+    margin:auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    min-width: 280px;
+}
+th.mat-header-cell {
+    text-align: left;
+    max-width: 280px;
+    color:black;
+}
+
+.mat-toolbar.mat-primary{
+    background-color:#FBB040
+}
+
+tr.mat-header-row{
+    background-color: #FBB040;
+}
+
+.mat-form-field{
+    width: 100%;
+    margin: 0 0 20px 0;
+}
+
+mat-card-actions.mat-card-actions {
+    margin-top: 25px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+table .btn-sm{
+    margin-right: 10px;
+}
+
+.total-value{
+    float:left;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .action-button{
+        margin: 5px;
+    }
+ }
+  
+ @media (min-width: 450px) and (max-width: 550px) {
+    table .btn-sm{
+        margin-right: 1px;
+        font-size:0.575rem;
+    }
+
+    .mat-header-cell{
+        font-size:12px;
+    }
+
+    .mat-cell{
+        font-size:12px;
+    }
+
+    .total-value{
+        font-size: 18px;
+    }
+
+    .action-button{
+        padding:0 5px;
+    }
+ }
+
+ @media screen and (max-width: 450px) {
+    td.mat-cell:last-of-type{
+        padding-right: 10px;
+    }
+
+    table .btn-sm{
+        margin-right: 1px;
+        font-size: 0.495rem;
+    }
+
+    .mat-header-cell{
+        font-size:10px;
+    }
+
+    .mat-cell{
+        font-size:10px;
+    }
+
+    .total-value{
+        font-size: 16px;
+    }
+
+    .action-button{
+        padding:0 5px;
+    }
+    .sidenav{
+        width:280px;
+    }
+    .mat-card{
+        max-width:280px;
+        min-width:280px;
+    }
+ }
+  
+  
